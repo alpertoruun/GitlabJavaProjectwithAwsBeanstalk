@@ -1,0 +1,11 @@
+stages:
+  - build
+
+build:
+  stage: build
+  image: openjdk:12-alpine
+  script:
+    - ./grandlew build
+  artifacts:
+    paths:
+      - ./build/libs/
